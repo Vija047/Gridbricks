@@ -10,7 +10,7 @@ Pilot web app for a UK energy utility’s **day-ahead procurement** team. It sho
 | Frontend (Vercel) | https://kjhwrx7qm.vercel.app |
 | Backend API (Render Docker) | https://kjhwrx7qm-api.onrender.com |
 | Backend API (Render Python, backup) | https://kjhwrx7qm-pyapi.onrender.com |
-| GitHub repo | https://github.com/Vija047/kjhwrx7qm |
+| GitHub repo | https://github.com/Vija047/Gridbricks |
 | Demo video (YouTube, unlisted) | _add after recording — see `docs/VIDEO_SCRIPT.md`_ |
 
 API health: `GET /health` · OpenAPI docs: `GET /docs`
