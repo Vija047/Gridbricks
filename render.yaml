@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: wind-forecast-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: DECISION_CUTOFF_LOCAL_TIME
+        value: "11:00"
+      - key: DECISION_TIMEZONE
+        value: Europe/London
+      - key: DATABASE_PATH
+        value: data/wind_jan2026.db
