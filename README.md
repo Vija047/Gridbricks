@@ -6,11 +6,16 @@ Pilot web app for a UK energy utility’s **day-ahead procurement** team. It sho
 
 | Resource | URL |
 |----------|-----|
-| Frontend (Vercel) | _to be filled after deploy_ |
-| Backend API (Render) | _to be filled after deploy_ |
-| Demo video (YouTube, unlisted) | _to be filled after recording_ |
+| Frontend (Render static — public) | https://kjhwrx7qm-web.onrender.com |
+| Frontend (Vercel) | https://kjhwrx7qm.vercel.app |
+| Backend API (Render Docker) | https://kjhwrx7qm-api.onrender.com |
+| Backend API (Render Python, backup) | https://kjhwrx7qm-pyapi.onrender.com |
+| GitHub repo | https://github.com/Vija047/kjhwrx7qm |
+| Demo video (YouTube, unlisted) | _add after recording — see `docs/VIDEO_SCRIPT.md`_ |
 
-API health: `GET /health` · Docs: `GET /docs`
+API health: `GET /health` · OpenAPI docs: `GET /docs`
+
+**Note:** Prefer the Render static frontend for anonymous / incognito review. If Vercel asks for login, disable Deployment Protection in the Vercel project settings (SSO protection is on by default on some accounts). Render free-tier APIs may cold-start for ~30–60s after idle.
 
 ## What it does
 
