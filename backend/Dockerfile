@@ -16,7 +16,9 @@ COPY data ./data
 ENV DATABASE_PATH=data/wind_jan2026.db
 ENV PYTHONUNBUFFERED=1
 
+# Materialize slim seed DB at the runtime path for cold starts
+RUN if [ -f data/seed/wind_jan2026.db ]; then cp data/seed/wind_jan2026.db data/wind_jan2026.db; fi
+
 EXPOSE 8000
 
-# Prefer seed DB on boot if live DB missing
-CMD ["sh", "-c", "python -c \"from app.services.store import Store; Store().ensure_db()\" && uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+CMD uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}
